@@ -19,7 +19,7 @@
 	<link href="css/owl.theme.css" rel="stylesheet" media="screen" />
 	<link href="css/animate.css" rel="stylesheet" />
 	<link href="css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
 	<!-- boxed bg -->
@@ -39,7 +39,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6 col-md-6">
-							<p class="bold text-left">Lunes - Sabado, 8am to 10pm </p>
+							<p class="bold text-left">Lunes - Sábado, 8am to 10pm </p>
 						</div>
 						<div class="col-sm-6 col-md-6">
 							<p class="bold text-right">llámanos ahora +57 310 2029854 </p>
@@ -63,10 +63,9 @@
 				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#intro">Inicio</a></li>
-						<li><a href="#service">Servicio</a></li>
-						<li><a href="#doctor">Productos</a></li>
+						<li><a href="#pricing">Beneficios</a></li>
+						<li><a href="#services">Servicios</a></li>
 						<li><a href="#testimonial">Testimonios</a></li>
-						<li><a href="#pricing">Precios</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
 									class="badge custom-badge red pull-right">Extra</span>Más <b class="caret"></b></a>
@@ -116,27 +115,27 @@
 						<div class="col-lg-6">
 							<div class="form-wrapper">
 								<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-
 									<div class="panel panel-skin">
 										<div class="panel-heading">
 											<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Pide tú
 												cita<small> (¡Es gratis!)</small></h3>
 										</div>
 										<div class="panel-body">
-											<form role="form" class="lead">
+											<form id="contact-form" class="lead" method="POST">
+												<!-- Agregado id y method -->
 												<div class="row">
 													<div class="col-xs-6 col-sm-6 col-md-6">
 														<div class="form-group">
 															<label>Nombres y apellidos</label>
 															<input type="text" name="name" id="name"
-																class="form-control input-md">
+																class="form-control input-md" required>
 														</div>
 													</div>
 													<div class="col-xs-6 col-sm-6 col-md-6">
 														<div class="form-group">
 															<label>Email</label>
 															<input type="email" name="email" id="email"
-																class="form-control input-md">
+																class="form-control input-md" required>
 														</div>
 													</div>
 												</div>
@@ -146,28 +145,37 @@
 														<div class="form-group">
 															<label>Número de télefono</label>
 															<input type="text" name="phone" id="phone"
-																class="form-control input-md">
+																class="form-control input-md" required>
 														</div>
 													</div>
 													<div class="col-xs-6 col-sm-6 col-md-6">
 														<div class="form-group">
 															<label>WhatsApp</label>
-															<input type="text" name="phone" id="Whatsapp"
-																class="form-control input-md">
+															<input type="text" name="whatsapp" id="whatsapp"
+																class="form-control input-md" required>
+														</div>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-6">
+														<div class="form-group">
+															<label>Fecha y hora de la cita</label>
+															<input type="datetime-local" id="fecha-hora"
+																name="fecha_hora" required>
 														</div>
 													</div>
 												</div>
-
-												<input type="submit" value="Enviar"
+												<input type="submit" id="submit-button" value="Enviar"
 													class="btn btn-skin btn-block btn-lg">
-
 												<p class="lead-footer">* Nos pondremos en contacto por teléfono y correo
-													electrónico más tarde.</p>
-
+													electrónico más tarde.</p><br>
+												<div id="success-message" style="display:none; color: green;">
+													¡Mensaje enviado exitosamente!
+												</div>
+												<div id="error-message" style="display:none; color: red;">
+													Ocurrió un error al enviar el mensaje.
+												</div>
 											</form>
 										</div>
 									</div>
-
 								</div>
 							</div>
 						</div>
@@ -177,72 +185,68 @@
 		</section>
 
 		<!-- /Section: intro -->
-
-		<!-- Section: boxes -->
-		<section id="boxes" class="home-section paddingtop-80">
-
+		<!-- Section: works -->
+		<section id="facilities" class="home-section paddingtop-80">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-3 col-md-3">
-						<div class="wow fadeInUp" data-wow-delay="0.2s">
-							<div class="box text-center">
-
-								<i class="fa fa-check fa-3x circled bg-skin"></i>
-								<h4 class="h-bold">Pedir hora</h4>
-								<p>
-									¡Es fácil! Reserva tu cita en nuestra página web o llámanos. Estamos aquí para
-									ayudarte a encontrar el horario que mejor te convenga.
+					<div class="col-lg-8 col-lg-offset-2">
+						<div class="wow fadeInDown" data-wow-delay="0.1s">
+							<div class="section-heading text-center">
+								<h2 class="h-bold">Nuestro proceso</h2>
+								<p>Desde la consulta inicial hasta el seguimiento, cada paso está diseñado para
+									brindarte un servicio excepcional. Nos enfocamos en tus necesidades para garantizar
+									tu satisfacción.</p>
 							</div>
 						</div>
+						<div class="divider-short"></div><br>
 					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="wow fadeInUp" data-wow-delay="0.2s">
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div id="owl-works" class="owl-carousel">
 							<div class="box text-center">
-
-								<i class="fa fa-list-alt fa-3x circled bg-skin"></i>
-								<h4 class="h-bold">Elige tu paquete</h4>
-								<p>
-									Mira nuestras opciones de sueroterapia y elige el paquete que más te convenga. Si
-									necesitas ayuda, nuestro equipo está listo para asesorarte y resolver tus dudas.
-								</p>
+								<div class="icon-wrapper">
+									<i class="fa fa-user-md circled"></i>
+								</div>
+								<h4 class="h-bold">Consulta Inicial</h4>
+								<p>Nos reunimos contigo para evaluar tus necesidades de salud y responder a tus preguntas.</p>
 							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="wow fadeInUp" data-wow-delay="0.2s">
 							<div class="box text-center">
-								<i class="fa fa-user-md fa-3x circled bg-skin"></i>
-								<h4 class="h-bold">Ayuda de un especialista</h4>
-								<p>
-									Relájate y disfruta de tu tratamiento en un ambiente cómodo, bajo la supervisión de
-									nuestro equipo profesional. Al finalizar, te daremos recomendaciones personalizadas
-									para que saques el máximo provecho de tu sesión y mejores tu bienestar.
+								<div class="icon-wrapper">
+									<i class="fa fa-tasks circled"></i>
+								</div>
+								<h4 class="h-bold">Planificación Personalizada</h4>
+								<p>Diseñamos un plan de tratamiento adaptado a tus requerimientos y objetivos de salud.</p>
 							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="wow fadeInUp" data-wow-delay="0.2s">
 							<div class="box text-center">
-
-								<i class="fa fa-hospital-o fa-3x circled bg-skin"></i>
-								<h4 class="h-bold">Sesión de sueroterapia y recomendaciones
-								</h4>
-								<p>
-									Disfruta de tu tratamiento en un ambiente cómodo y relajante, supervisado por
-									profesionales cualificados. Después de la sesión, recibirás recomendaciones
-									personalizadas para maximizar los beneficios de tu tratamiento y mejorar tu
-									bienestar general.
-								</p>
+								<div class="icon-wrapper">
+									<i class="fa fa-calendar-check circled"></i>
+								</div>
+								<h4 class="h-bold">Confirmación de Cita</h4>
+								<p>Te enviamos la confirmación de tu cita con todos los detalles necesarios.</p>
+							</div>
+							<div class="box text-center">
+								<div class="icon-wrapper">
+									<i class="fa fa-hospital-o circled"></i>
+								</div>
+								<h4 class="h-bold">Ejecución del Servicio</h4>
+								<p>Realizamos el tratamiento de sueroterapia según lo acordado, garantizando calidad y atención.</p>
+							</div>
+							<div class="box text-center">
+								<div class="icon-wrapper">
+									<i class="fa fa-comments circled"></i>
+								</div>
+								<h4 class="h-bold">Seguimiento Post-Tratamiento</h4>
+								<p>Nos comunicamos contigo para asegurarnos de que estés satisfecho y atender cualquier inquietud.</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-
+			</div>			
 		</section>
-		<!-- /Section: boxes -->
-
-
+		<!-- /Section: works -->
 		<section id="callaction" class="home-section paddingtop-40">
 			<div class="container">
 				<div class="row">
@@ -273,254 +277,229 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div><br>
 		</section>
+<!-- Section: pricing -->
+<section id="pricing" class="home-section bg-gray paddingbot-60">
+	<div class="container marginbot-50">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<div class="wow lightSpeedIn" data-wow-delay="0.1s">
+					<div class="section-heading text-center">
+						<h2 class="h-bold">Beneficios</h2>
+						<p>Descubre cómo la sueroterapia puede mejorar tu salud y bienestar.</p>
+					</div>
+				</div>
+				<div class="divider-short"></div>
+			</div>
+		</div>
+	</div>
 
-
-		<!-- Section: services -->
-		<section id="service" class="home-section nopadding paddingtop-60">
-
-			<div class="container">
-
-				<div class="row">
-					<div class="col-sm-6 col-md-6">
-						<div class="wow fadeInUp" data-wow-delay="0.2s">
-							<img src="img/dummy/img-1.jpg" class="img-responsive" alt="" />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 pricing-box">
+				<div class="wow bounceInUp" data-wow-delay="0.1s">
+					<div class="pricing-content general">
+						<h2>Hidratación Rápida</h2>
+						<p>Proporciona una hidratación inmediata y efectiva al administrar líquidos directamente al torrente sanguíneo, ideal para deportistas.</p>
+						<ul>
+							<li>Absorción más rápida<i class="fa fa-check icon-success"></i></li>
+							<li>Rehidratación directa<i class="fa fa-check icon-success"></i></li>
+							<li>Ideal para deshidratación severa<i class="fa fa-check icon-success"></i></li>
+						</ul>
+						<div class="price-bottom">
+							<a href="#" class="btn btn-skin btn-lg">Leer más</a>
 						</div>
 					</div>
-					<div class="col-sm-3 col-md-3">
-
-						<div class="wow fadeInRight" data-wow-delay="0.1s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-water fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Hidratante</h5>
-									<p>Revitaliza el organismo y combate la deshidratación.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="wow fadeInRight" data-wow-delay="0.2s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-bolt fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Energizante</h5>
-									<p>Aumenta la energía y combate la fatiga.</p>
-								</div>
-							</div>
-						</div>
-						<div class="wow fadeInRight" data-wow-delay="0.3s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-shield-alt fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Sistema inmune</h5>
-									<p>Fortalece el sistema inmunológico.</p>
-								</div>
-							</div>
-						</div>
-						<div class="wow fadeInRight" data-wow-delay="0.3s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-leaf fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Antioxidante</h5>
-									<p>Combate el estrés oxidativo y mejora la piel.</p>
-								</div>
-							</div>
-						</div>
-						<div class="wow fadeInRight" data-wow-delay="0.3s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-recycle fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Detoxificante</h5>
-									<p>Elimina toxinas y mejora la salud general.</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="wow fadeInRight" data-wow-delay="0.2s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-running fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Para Deportistas</h5>
-									<p>Ayuda a la recuperación muscular.</p>
-								</div>
-							</div>
-						</div>
-						<div class="wow fadeInRight" data-wow-delay="0.3s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-spa fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Para la Piel</h5>
-									<p>Mejora la salud y apariencia de la piel.</p>
-								</div>
-							</div>
-						</div>
-						<div class="wow fadeInRight" data-wow-delay="0.3s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-smile fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Antiestrés</h5>
-									<p>Reduce la ansiedad y mejora el bienestar.</p>
-								</div>
-							</div>
-						</div>
-						<div class="wow fadeInRight" data-wow-delay="0.3s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-user-check fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Personalizada</h5>
-									<p>Tratamiento adaptado a tus necesidades.</p>
-								</div>
-							</div>
-						</div>
-						<div class="wow fadeInRight" data-wow-delay="0.1s">
-							<div class="service-box">
-								<div class="service-icon">
-									<span class="fa fa-heartbeat fa-3x"></span>
-								</div>
-								<div class="service-desc">
-									<h5 class="h-light">Preventiva</h5>
-									<p>Mantiene la salud y previene enfermedades.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
+					
 				</div>
 			</div>
-		</section>
-		<!-- /Section: services -->
 
+			<div class="col-sm-4 pricing-box featured-price">
+				<div class="wow bounceInUp" data-wow-delay="0.3s">
+					<div class="pricing-content featured">
+						<h2>Reposición de Nutrientes</h2>
+						<p>Restaura rápidamente vitaminas y minerales esenciales, mejorando tu nivel de energía y fortaleciendo tu sistema inmunológico.</p>
+						<ul>
+							<li>Vitaminas esenciales <i class="fa fa-check icon-success"></i></li>
+							<li>Mejora del estado de ánimo <i class="fa fa-check icon-success"></i></li>
+							<li>Fortalece el sistema inmunológico <i class="fa fa-check icon-success"></i></li>
+						</ul>
+						<div class="price-bottom">
+							<a href="#" class="btn btn-skin btn-lg">Leer más</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 pricing-box">
+				<div class="wow bounceInUp" data-wow-delay="0.2s">
+					<div class="pricing-content general last">
+						<h2>Desintoxicación</h2>
+						<p>Elimina toxinas de tu cuerpo y acelera el proceso de recuperación tras enfermedades o periodos de fatiga.</p>
+						<ul>
+							<li>Eliminación de toxinas<i class="fa fa-check icon-success"></i></li>
+							<li>Acelera la recuperación <i class="fa fa-check icon-success"></i></li>
+							<li>Mejora el bienestar general <i class="fa fa-check icon-success"></i></li>
+						</ul>
+						<div class="price-bottom">
+							<a href="#" class="btn btn-skin btn-lg">Leer más</a>
+						</div>
+					</div>
+				</div>
+			</div>
 
-		<!-- Section: team -->
-		<section id="doctor" class="home-section bg-gray paddingbot-60">
-			<div class="container marginbot-50">
+		</div>
+
+	</div>
+</section>
+<!-- /Section: pricing -->
+		<!-- Section: services -->
+	<!-- Section: team -->
+		<section id="services" class="home-section paddingbot-60">
+			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 col-lg-offset-2">
 						<div class="wow fadeInDown" data-wow-delay="0.1s">
 							<div class="section-heading text-center">
-								<h2 class="h-bold">Productos</h2>
-								<p>Cada suero está diseñado para abordar tus necesidades específicas y mejorar tu salud de manera efectiva.</p>
+								<h2 class="h-bold">Nuestros Servicios</h2>
+								<p>Explora nuestras categorías de terapias intravenosas.</p>
 							</div>
 						</div>
 						<div class="divider-short"></div>
 					</div>
 				</div>
 			</div>
-
+			
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-
+					
 						<div id="filters-container" class="cbp-l-filters-alignLeft">
-							<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (<div
-									class="cbp-filter-counter"></div>)</div>
-							<div data-filter=".cardiologist" class="cbp-filter-item">Cardiologist (<div
-									class="cbp-filter-counter"></div>)</div>
-							<div data-filter=".psychiatrist" class="cbp-filter-item">Psychiatrist (<div
-									class="cbp-filter-counter"></div>)</div>
-							<div data-filter=".neurologist" class="cbp-filter-item">Neurologist (<div
-									class="cbp-filter-counter"></div>)</div>
+							<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">Todos los Servicios (<div class="cbp-filter-counter"></div>)</div>
+							<div data-filter=".terapias-hidratacion" class="cbp-filter-item">Hidratación y Recuperación (<div class="cbp-filter-counter"></div>)</div>
+							<div data-filter=".energía_bienestar" class="cbp-filter-item">Energía y Bienestar (<div class="cbp-filter-counter"></div>)</div>
+							<div data-filter=".terapias-antienvejecimiento" class="cbp-filter-item">Terapias Antienvejecimiento (<div class="cbp-filter-counter"></div>)</div>
 						</div>
-
+					
 						<div id="grid-container" class="cbp-l-grid-team">
 							<ul>
-								<li class="cbp-item psychiatrist">
-									<a href="doctors/member1.html" class="cbp-caption cbp-singlePage">
+								<!-- Ejemplo de servicio de hidratación -->
+								<li class="cbp-item terapias-hidratacion">
+									<a href="services/service1.html" class="cbp-caption cbp-singlePage">
 										<div class="cbp-caption-defaultWrap">
-											<img src="img/team/1.jpg" alt="" width="100%">
+											<img src="img/services/hidratacion.jpg" alt="" width="100%">
 										</div>
 										<div class="cbp-caption-activeWrap">
 											<div class="cbp-l-caption-alignCenter">
 												<div class="cbp-l-caption-body">
-													<div class="cbp-l-caption-text">VIEW PROFILE</div>
+													<div class="cbp-l-caption-text">Ver Servicio</div>
 												</div>
 											</div>
 										</div>
 									</a>
-									<a href="doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice
-										Grue</a>
-									<div class="cbp-l-grid-team-position">Psychiatrist</div>
+									<a href="services/service1.html" class="cbp-singlePage cbp-l-grid-team-name">Sueroterapia para Rehidratación</a>
 								</li>
-								<li class="cbp-item cardiologist">
-									<a href="doctors/member2.html" class="cbp-caption cbp-singlePage">
+								<li class="cbp-item terapias-hidratacion">
+									<a href="services/service1.html" class="cbp-caption cbp-singlePage">
 										<div class="cbp-caption-defaultWrap">
-											<img src="img/team/2.jpg" alt="" width="100%">
+											<img src="img/services/hidratacion.jpg" alt="" width="100%">
 										</div>
 										<div class="cbp-caption-activeWrap">
 											<div class="cbp-l-caption-alignCenter">
 												<div class="cbp-l-caption-body">
-													<div class="cbp-l-caption-text">VIEW PROFILE</div>
+													<div class="cbp-l-caption-text">Ver Servicio</div>
 												</div>
 											</div>
 										</div>
 									</a>
-									<a href="doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph
-										Murphy</a>
-									<div class="cbp-l-grid-team-position">Cardiologist</div>
+									<a href="services/service1.html" class="cbp-singlePage cbp-l-grid-team-name">Recuperación Deportiva</a>
 								</li>
-								<li class="cbp-item cardiologist">
-									<a href="doctors/member3.html" class="cbp-caption cbp-singlePage">
+								<li class="cbp-item terapias-hidratacion">
+									<a href="services/service1.html" class="cbp-caption cbp-singlePage">
 										<div class="cbp-caption-defaultWrap">
-											<img src="img/team/3.jpg" alt="" width="100%">
+											<img src="img/services/hidratacion.jpg" alt="" width="100%">
 										</div>
 										<div class="cbp-caption-activeWrap">
 											<div class="cbp-l-caption-alignCenter">
 												<div class="cbp-l-caption-body">
-													<div class="cbp-l-caption-text">VIEW PROFILE</div>
+													<div class="cbp-l-caption-text">Ver Servicio</div>
 												</div>
 											</div>
 										</div>
 									</a>
-									<a href="doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison
-										Davis</a>
-									<div class="cbp-l-grid-team-position">Cardiologist</div>
+									<a href="services/service1.html" class="cbp-singlePage cbp-l-grid-team-name">Recuperación Post-Enfermedad</a>
 								</li>
-								<li class="cbp-item neurologist">
-									<a href="doctors/member4.html" class="cbp-caption cbp-singlePage">
+								<!-- Ejemplo de servicio de energía_bienestar -->
+								<li class="cbp-item energía_bienestar">
+									<a href="services/service2.html" class="cbp-caption cbp-singlePage">
 										<div class="cbp-caption-defaultWrap">
-											<img src="img/team/4.jpg" alt="" width="100%">
+											<img src="img/services/recuperacion.jpg" alt="" width="100%">
 										</div>
 										<div class="cbp-caption-activeWrap">
 											<div class="cbp-l-caption-alignCenter">
 												<div class="cbp-l-caption-body">
-													<div class="cbp-l-caption-text">VIEW PROFILE</div>
+													<div class="cbp-l-caption-text">Ver Servicio</div>
 												</div>
 											</div>
 										</div>
 									</a>
-									<a href="doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam
-										Taylor</a>
-									<div class="cbp-l-grid-team-position">Neurologist</div>
+									<a href="services/service2.html" class="cbp-singlePage cbp-l-grid-team-name">Terapia Energizante</a>
 								</li>
-
+								<li class="cbp-item energía_bienestar">
+									<a href="services/service2.html" class="cbp-caption cbp-singlePage">
+										<div class="cbp-caption-defaultWrap">
+											<img src="img/services/recuperacion.jpg" alt="" width="100%">
+										</div>
+										<div class="cbp-caption-activeWrap">
+											<div class="cbp-l-caption-alignCenter">
+												<div class="cbp-l-caption-body">
+													<div class="cbp-l-caption-text">Ver Servicio</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="services/service2.html" class="cbp-singlePage cbp-l-grid-team-name">Terapia de Vitaminas y Minerales</a>
+								</li>
+								<li class="cbp-item energía_bienestar">
+									<a href="services/service2.html" class="cbp-caption cbp-singlePage">
+										<div class="cbp-caption-defaultWrap">
+											<img src="img/services/recuperacion.jpg" alt="" width="100%">
+										</div>
+										<div class="cbp-caption-activeWrap">
+											<div class="cbp-l-caption-alignCenter">
+												<div class="cbp-l-caption-body">
+													<div class="cbp-l-caption-text">Ver Servicio</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="services/service2.html" class="cbp-singlePage cbp-l-grid-team-name">Terapia Antiestrés</a>
+								</li>
+								
+								<!-- Ejemplo de servicio antienvejecimiento -->
+								<li class="cbp-item terapias-antienvejecimiento">
+									<a href="services/service3.html" class="cbp-caption cbp-singlePage">
+										<div class="cbp-caption-defaultWrap">
+											<img src="img/services/antienvejecimiento.jpg" alt="" width="100%">
+										</div>
+										<div class="cbp-caption-activeWrap">
+											<div class="cbp-l-caption-alignCenter">
+												<div class="cbp-l-caption-body">
+													<div class="cbp-l-caption-text">Ver Servicio</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="services/service3.html" class="cbp-singlePage cbp-l-grid-team-name">Terapia Antienvejecimiento</a>
+									<div class="cbp-l-grid-team-position">Antienvejecimiento</div>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</section>
+		
 		<!-- /Section: team -->
 
 		<!-- Section: testimonial -->
@@ -535,8 +514,8 @@
 								<div class="item active">
 									<div class="col-md-4 col-sm-6">
 										<div class="block-text rel zmin">
-											<a title="" href="#">Emergency Contraception</a>
-											<div class="mark">My rating: <span class="rating-input"><span data-value="0"
+											<a title="" href="#">¡Altamente recomendada!</a>
+											<div class="mark">Puntuación: <span class="rating-input"><span data-value="0"
 														class="glyphicon glyphicon-star"></span><span data-value="1"
 														class="glyphicon glyphicon-star"></span><span data-value="2"
 														class="glyphicon glyphicon-star"></span><span data-value="3"
@@ -544,21 +523,22 @@
 														class="glyphicon glyphicon-star-empty"></span><span
 														data-value="5" class="glyphicon glyphicon-star-empty"></span>
 												</span></div>
-											<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem
-												fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...
+											<p>Después de mi maratón, me sentí completamente deshidratada. 
+												La sueroterapia para rehidratación fue una salvación. 
+												En cuestión de horas, estaba lista para seguir entrenando.
 											</p>
 											<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 										</div>
 										<div class="person-text rel text-light">
 											<img src="img/testimonials/1.jpg" alt="" class="person img-circle" />
 											<a title="" href="#">Anna</a>
-											<span>Chicago, Illinois</span>
+											<span>Bogotá, Colombia</span>
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-6 hidden-xs">
 										<div class="block-text rel zmin">
-											<a title="" href="#">Orthopedic Surgery</a>
-											<div class="mark">My rating: <span class="rating-input"><span data-value="0"
+											<a title="" href="#">¡Gracias!</a>
+											<div class="mark">Puntuación: <span class="rating-input"><span data-value="0"
 														class="glyphicon glyphicon-star"></span><span data-value="1"
 														class="glyphicon glyphicon-star"></span><span data-value="2"
 														class="glyphicon glyphicon-star-empty"></span><span
@@ -568,44 +548,43 @@
 														class="glyphicon glyphicon-star-empty"></span><span
 														data-value="5" class="glyphicon glyphicon-star-empty"></span>
 												</span></div>
-											<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem
-												fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...
+											<p>Sufrí de fatiga crónica durante años y no encontré alivio hasta que probé la terapia energizante.
+												 Ahora tengo más energía y puedo disfrutar de mis actividades sin sentirme agotado. 
 											</p>
 											<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 										</div>
 										<div class="person-text rel text-light">
 											<img src="img/testimonials/2.jpg" alt="" class="person img-circle" />
 											<a title="" href="#">Matthew G</a>
-											<span>San Antonio, Texas</span>
+											<span>Pereira, Colombia</span>
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
 										<div class="block-text rel zmin">
-											<a title="" href="#">Medical consultation</a>
-											<div class="mark">My rating: <span class="rating-input"><span data-value="0"
+											<a title="" href="#">¡Una experiencia maravillosa!</a>
+											<div class="mark">Puntuación: <span class="rating-input"><span data-value="0"
 														class="glyphicon glyphicon-star"></span><span data-value="1"
 														class="glyphicon glyphicon-star"></span><span data-value="2"
 														class="glyphicon glyphicon-star"></span><span data-value="3"
 														class="glyphicon glyphicon-star"></span><span data-value="4"
 														class="glyphicon glyphicon-star"></span><span data-value="5"
 														class="glyphicon glyphicon-star"></span> </span></div>
-											<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem
-												fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...
+											<p>Recibí la terapia detox y noté una gran diferencia en mi piel. Desde la primera sesión, se siente mucho más suave y radiante, y he recibido cumplidos sobre mi apariencia.
 											</p>
 											<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 										</div>
 										<div class="person-text rel text-light">
 											<img src="img/testimonials/3.jpg" alt="" class="person img-circle" />
 											<a title="" href="#">Scarlet Smith</a>
-											<span>Dallas, Texas</span>
+											<span>Bogotá, Colombia</span>
 										</div>
 									</div>
 								</div>
 								<div class="item">
 									<div class="col-md-4 col-sm-6">
 										<div class="block-text rel zmin">
-											<a title="" href="#">Birth control pills</a>
-											<div class="mark">My rating: <span class="rating-input"><span data-value="0"
+											<a title="" href="#">¡Increíble!”</a>
+											<div class="mark">Puntuación: <span class="rating-input"><span data-value="0"
 														class="glyphicon glyphicon-star"></span><span data-value="1"
 														class="glyphicon glyphicon-star"></span><span data-value="2"
 														class="glyphicon glyphicon-star"></span><span data-value="3"
@@ -613,21 +592,20 @@
 														class="glyphicon glyphicon-star-empty"></span><span
 														data-value="5" class="glyphicon glyphicon-star-empty"></span>
 												</span></div>
-											<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem
-												fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...
+											<p>Sufro de migrañas recurrentes y la terapia para migrañas ha sido, sin duda, mi mejor hallazgo. El alivio que experimenté fue casi inmediato, permitiéndome continuar con mi día sin el dolor intenso que solía tener. 
 											</p>
 											<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 										</div>
 										<div class="person-text rel text-light">
 											<img src="img/testimonials/4.jpg" alt="" class="person img-circle" />
 											<a title="" href="#">Lucas Thompson</a>
-											<span>Austin, Texas</span>
+											<span>Pereira, Colombia</span>
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-6 hidden-xs">
 										<div class="block-text rel zmin">
-											<a title="" href="#">Radiology</a>
-											<div class="mark">My rating: <span class="rating-input"><span data-value="0"
+											<a title="" href="#">¡Gracias por este maravilloso tratamiento!</a>
+											<div class="mark">Puntuación: <span class="rating-input"><span data-value="0"
 														class="glyphicon glyphicon-star"></span><span data-value="1"
 														class="glyphicon glyphicon-star"></span><span data-value="2"
 														class="glyphicon glyphicon-star-empty"></span><span
@@ -637,43 +615,39 @@
 														class="glyphicon glyphicon-star-empty"></span><span
 														data-value="5" class="glyphicon glyphicon-star-empty"></span>
 												</span></div>
-											<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem
-												fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...
+											<p>Decidí probar la terapia anti-aging y estoy sorprendida con los resultados. 
+												Mi piel se ve más joven y fresca. No puedo esperar para ver los resultados a largo plazo. 
 											</p>
 											<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 										</div>
 										<div class="person-text rel text-light">
 											<img src="img/testimonials/5.jpg" alt="" class="person img-circle" />
 											<a title="" href="#">Ella Mentree</a>
-											<span>Fort Worth, Texas</span>
+											<span>Pereira, Colombia</span>
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
 										<div class="block-text rel zmin">
-											<a title="" href="#">Cervical Lesions</a>
-											<div class="mark">My rating: <span class="rating-input"><span data-value="0"
+											<a title="" href="#">¡Definitivamente volveré!</a>
+											<div class="mark">Puntuación: <span class="rating-input"><span data-value="0"
 														class="glyphicon glyphicon-star"></span><span data-value="1"
 														class="glyphicon glyphicon-star"></span><span data-value="2"
 														class="glyphicon glyphicon-star"></span><span data-value="3"
 														class="glyphicon glyphicon-star"></span><span data-value="4"
 														class="glyphicon glyphicon-star"></span><span data-value="5"
 														class="glyphicon glyphicon-star"></span> </span></div>
-											<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem
-												fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...
+											<p>Después de una noche de celebración, la recuperación post-resaca fue un verdadero salvavidas para mí. En poco tiempo, me sentí como nuevo, como si no hubiera tenido una noche de fiesta en absoluto.
 											</p>
 											<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 										</div>
 										<div class="person-text rel text-light">
 											<img src="img/testimonials/6.jpg" alt="" class="person img-circle" />
 											<a title="" href="#">Suzanne Adam</a>
-											<span>Detroit, Michigan</span>
+											<span>Bogotá, Colombia</span>
 										</div>
 									</div>
 								</div>
-
-
 							</div>
-
 							<a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
 								<span class="glyphicon glyphicon-chevron-left"></span>
 							</a>
@@ -688,89 +662,7 @@
 		<!-- /Section: testimonial -->
 
 
-		<!-- Section: pricing -->
-		<section id="pricing" class="home-section bg-gray paddingbot-60">
-			<div class="container marginbot-50">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="wow lightSpeedIn" data-wow-delay="0.1s">
-							<div class="section-heading text-center">
-								<h2 class="h-bold">Paquetes de salud</h2>
-								<p>Tome el control de su salud hoy con nuestros paquetes de salud especialmente diseñados.</p>
-							</div>
-						</div>
-						<div class="divider-short"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="container">
-
-				<div class="row">
-
-					<div class="col-sm-4 pricing-box">
-						<div class="wow bounceInUp" data-wow-delay="0.1s">
-							<div class="pricing-content general">
-								<h2>Basic Fit 1 Package</h2>
-								<h3>$33<sup>.99</sup> <span>/ one time</span></h3>
-								<ul>
-									<li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
-									<li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
-									<li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
-									<li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
-								</ul>
-
-								<div class="price-bottom">
-									<a href="#" class="btn btn-skin btn-lg">Purchase</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-4 pricing-box featured-price">
-						<div class="wow bounceInUp" data-wow-delay="0.3s">
-							<div class="pricing-content featured">
-								<h2>Golden Glow Package</h2>
-								<h3>$65<sup>.99</sup> <span>/ one time</span></h3>
-								<ul>
-									<li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
-									<li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
-									<li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
-									<li>Body Composition Analysis <i class="fa fa-check icon-success"></i></li>
-									<li>GR Assessment & Scoring <i class="fa fa-check icon-success"></i></li>
-								</ul>
-
-								<div class="price-bottom">
-									<a href="#" class="btn btn-skin btn-lg">Purchase</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-4 pricing-box">
-						<div class="wow bounceInUp" data-wow-delay="0.2s">
-							<div class="pricing-content general last">
-								<h2>Basic Fit 2 Package</h2>
-								<h3>$47<sup>.99</sup> <span>/ one time</span></h3>
-								<ul>
-									<li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
-									<li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
-									<li>General Screening – Regular <i class="fa fa-check icon-success"></i></li>
-									<li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
-								</ul>
-
-								<div class="price-bottom">
-									<a href="#" class="btn btn-skin btn-lg">Purchase</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</section>
-		<!-- /Section: pricing -->
+		
 		<footer>
 
 			<div class="container">
@@ -778,20 +670,21 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="wow fadeInDown" data-wow-delay="0.1s">
 							<div class="widget">
-								<h5>About Medicio</h5>
+								<h5>Acerca de</h5>
 								<p>
-									Lorem ipsum dolor sit amet, ne nam purto nihil impetus, an facilisi accommodare sea
+									La sueroterapia es un tratamiento que te ayuda a sentirte mejor rápido, dándote un
+									impulso de energía e hidratación con vitaminas y nutrientes directamente en tu
+									cuerpo.
 								</p>
 							</div>
 						</div>
 						<div class="wow fadeInDown" data-wow-delay="0.1s">
 							<div class="widget">
-								<h5>Information</h5>
+								<h5>Información</h5>
 								<ul>
-									<li><a href="#">Home</a></li>
-									<li><a href="#">Laboratory</a></li>
-									<li><a href="#">Medical treatment</a></li>
-									<li><a href="#">Terms & conditions</a></li>
+									<li><a href="#intro">Inicio</a></li>
+									<li><a href="#service">Servicios</a></li>
+									<li><a href="#">Precios</a></li>
 								</ul>
 							</div>
 						</div>
@@ -799,28 +692,24 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="wow fadeInDown" data-wow-delay="0.1s">
 							<div class="widget">
-								<h5>Medicio center</h5>
-								<p>
-									Nam leo lorem, tincidunt id risus ut, ornare tincidunt naqunc sit amet.
-								</p>
 								<ul>
 									<li>
 										<span class="fa-stack fa-lg">
 											<i class="fa fa-circle fa-stack-2x"></i>
 											<i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
-										</span> Monday - Saturday, 8am to 10pm
-									</li>
+										</span> Lunes - Sábado, 8am to 10pm
+									</li><br>
 									<li>
 										<span class="fa-stack fa-lg">
 											<i class="fa fa-circle fa-stack-2x"></i>
 											<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-										</span> +62 0888 904 711
-									</li>
+										</span> +57 310 2029854
+									</li><br>
 									<li>
 										<span class="fa-stack fa-lg">
 											<i class="fa fa-circle fa-stack-2x"></i>
-											<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-										</span> hello@medicio.com
+											<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+										</span> vitalvit2024@gmail.com
 									</li>
 
 								</ul>
@@ -828,22 +717,15 @@
 						</div>
 					</div>
 					<div class="col-sm-6 col-md-4">
-						<div class="wow fadeInDown" data-wow-delay="0.1s">
+						<div class="wow fadeInDown social-widget" data-wow-delay="0.1s">
 							<div class="widget">
-								<h5>Our location</h5>
-								<p>The Suithouse V303, Kuningan City, Jakarta Indonesia 12940</p>
-
-							</div>
-						</div>
-						<div class="wow fadeInDown" data-wow-delay="0.1s">
-							<div class="widget">
-								<h5>Follow us</h5>
+								<h5>Síguenos</h5>
 								<ul class="company-social">
-									<li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									<li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
-									<li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+									<li class="social-facebook"><a href="#"><i class="fab fa-facebook"></i></a></li>
+									<li class="social-instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+									<li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+									<li class="social-google"><a href="#"><i class="fab fa-google"></i></a></li>
+
 								</ul>
 							</div>
 						</div>
@@ -856,7 +738,7 @@
 						<div class="col-sm-6 col-md-6 col-lg-6">
 							<div class="wow fadeInLeft" data-wow-delay="0.1s">
 								<div class="text-left">
-									<p>&copy;Copyright 2015 - Medicio. All rights reserved.</p>
+									<p style="color: white; font-weight: bold;">&copy;Copyright 2024 - VitalVit. Todos los derechos son reservados.</p>
 								</div>
 							</div>
 						</div>
@@ -880,7 +762,40 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/nivo-lightbox.min.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+	<script>
+		emailjs.init("xcjKxWWSR2vdnhmnX");
 
+		document.getElementById('contact-form').addEventListener('submit', function (event) {
+			event.preventDefault();
+			var submitButton = document.getElementById('submit-button');
+			submitButton.disabled = true;
+			submitButton.value = 'Enviando...';
+
+			emailjs.sendForm('service_8a2chnv', 'template_3l7cmee', this)
+				.then(function (response) {
+					console.log('SUCCESS!', response.status, response.text);
+					document.getElementById('success-message').style.display = 'block';
+					document.getElementById('error-message').style.display = 'none';
+
+					// Oculta el mensaje después de 3 segundos y limpia el formulario
+					setTimeout(function () {
+						document.getElementById('success-message').style.display = 'none';
+						document.getElementById('contact-form').reset(); // Limpia los campos del formulario
+					}, 2000); // 3000 milisegundos = 3 segundos
+				}, function (error) {
+					console.log('FAILED...', error);
+					document.getElementById('error-message').style.display = 'block';
+					document.getElementById('success-message').style.display = 'none';
+				})
+				.finally(function () {
+					submitButton.disabled = false;
+					submitButton.value = 'Enviar mensaje';
+				});
+		});
+	</script>
 
 </body>
 

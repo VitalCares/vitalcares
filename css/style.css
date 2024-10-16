@@ -229,6 +229,8 @@ blockquote strong {
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 
+
+
 /* =======
 Top area
 ======== */
@@ -938,17 +940,13 @@ Elements
 
 /* box */
 
-
-.box {
-
-}
-
 .box h4 {
 	font-size: 24px;
 }
 
 .box i {
-	margin-bottom: 30px;
+	margin-bottom: auto; 
+	margin-top: 20%;
 }
 
 
@@ -960,6 +958,37 @@ Elements
     height: 1.6em;
 	text-align: center;
 	line-height: 1.6em;
+}
+
+/* =======
+icono
+======== */
+
+.icon-wrapper {
+    display: flex;                  /* Utiliza flexbox para centrar */
+    justify-content: center;        /* Centra el ícono horizontalmente */
+    align-items: center;            /* Centra el ícono verticalmente */
+    width: 60px;                   /* Ancho del contenedor del ícono */
+    height: 60px;                  /* Altura del contenedor del ícono */
+    margin: 0 auto;                /* Centra el contenedor en la página */
+    background: #4ACCD1;           /* Color de fondo */
+    border-radius: 50%;            /* Hace el fondo circular */
+    position: relative;             /* Posicionamiento relativo */
+}
+
+.circled {
+    font-size: 30px;               /* Tamaño del ícono */
+    margin: 0;                     /* Elimina márgenes adicionales */
+    position: absolute;             /* Posiciona de forma absoluta */
+}
+
+.box {
+    margin-bottom: 30px;           /* Espacio entre cada caja */
+    text-align: center;            /* Centra el contenido de la caja */
+}
+
+h4.h-bold {
+    margin-top: 15px;              /* Espacio entre el ícono y el título */
 }
 
 
@@ -1192,12 +1221,16 @@ Testimonial
 }
 
 .company-social .social-facebook a i{background: #3873ae;}
+.company-social .social-instagram a i{background: #e4405f;}
+.company-social .social-youtube a i{background: #ff0000;}
 .company-social .social-twitter a i{background: #62c6f8;}
 .company-social .social-dribble a i{background: #d74980;}
 .company-social .social-deviantart a i{background: #8da356;}
 .company-social .social-google a i {background: #000;}
 .company-social .social-vimeo a i {background: #51a6d3;}
 .company-social .social-facebook a:hover i {background: #4893ce;}
+.company-social .social-instagram a:hover i {background: #da7083;}
+.company-social .social-youtube a:hover i {background: #ed7e7e;}
 .company-social .social-twitter a:hover i {background: #82e6ff;}
 .company-social .social-dribble a:hover i {background: #f769a0;}
 .company-social .social-deviantart a:hover i {background: #adc376;}
@@ -1255,6 +1288,7 @@ Testimonial
 
 
 
+
 /* ===========================
 --- Footer
 ============================ */
@@ -1281,7 +1315,7 @@ footer .widget h5 {
 
 .sub-footer {
 	margin-top: 30px;
-    background-color: #f7f7f7;
+    background-color: #3fbbc0;
 	border-top: 1px solid #ddd;
 	padding: 30px 0 10px;
 }
@@ -1298,7 +1332,7 @@ footer .sub-footer  p {
 /* -- icon var -- */
 
 .bg-dark {
-	background: #666;
+	background: #fff;
 }
 
 .bg-light {
@@ -2038,7 +2072,7 @@ a.btn:focus{
 	}
 
 	.box i {
-		margin-bottom: 30px;
+		margin-bottom: 0px;
 	}
 		
 }
