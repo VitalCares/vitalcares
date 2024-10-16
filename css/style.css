@@ -98,7 +98,7 @@ h6 {
     margin: 0 0 30px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-	color: #444;
+	color: #fff;
 	line-height: 1em;
 }
 
@@ -120,6 +120,8 @@ h1.h-medium,h2.h-medium,h3.h-medium ,h4.h-medium ,h5.h-medium ,h6.h-medium  {
 
 h1.h-bold,h2.h-bold,h3.h-bold ,h4.h-bold ,h5.h-bold ,h6.h-bold  {
 	font-weight: 700;
+	color: #666;
+
 }
 
 h1.h-ultra,h2.h-ultra,h3.h-ultra ,h4.h-ultra ,h5.h-ultra ,h6.h-ultra  {
@@ -262,14 +264,14 @@ Navigation
 ============= */
 
 .navbar-brand {
-  padding-top: 15px;
+  padding-top: 0px;
   margin-top: 5px;
   padding-bottom: 0;
 }
 
 .navbar-brand.reduce {
-	margin-top:0;
-  padding-top: 5px;
+	margin-top:0px;
+  	padding-top: 5px;
 	padding-bottom: 5px;
  	-webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
@@ -352,6 +354,7 @@ Navigation
 
 .navbar.navbar-custom.top-nav-collapse .navigation {
 	padding-bottom: 10px;
+padding: 10px;
 }
 
 .navbar-custom.top-nav-collapse ul.nav li a {
@@ -867,17 +870,20 @@ form.lead label,form.lead input {
 .cta-text {
 	margin-top:10px;
 	text-align: left;
+	color: #666;
 }
 
 .cta-text h3 {
 	font-weight:900;
 	line-height:1.1em;
 	margin-bottom: 20px;
+	color: #666;
 }
 .cta-btn {
 	float:right;
 	padding:20px 10px 20px 20px;
 	margin-top:10px;
+	color: #666;
 }
 
 
@@ -1283,6 +1289,7 @@ Testimonial
 	list-style: none;
 	margin-left:0;
 	padding-left:0;
+	color: #666;
 }
 
 
@@ -1310,6 +1317,8 @@ footer .widget h5 {
 	font-size: 20px;
 	margin-bottom: 10px;
 	text-transform: uppercase;
+	color: #666;
+
 }
 
 
@@ -1332,7 +1341,7 @@ footer .sub-footer  p {
 /* -- icon var -- */
 
 .bg-dark {
-	background: #fff;
+	background: #666;
 }
 
 .bg-light {
@@ -1993,7 +2002,7 @@ a.btn:focus{
 	.navbar-header button {
 		border-color: #ccc;
 		background-color: #eee;
-		padding: 5px 20px;
+		padding: 0px 20px;
 	}
 	.navbar-header i{
 		color: #666;

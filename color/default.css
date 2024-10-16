@@ -65,6 +65,7 @@ a:focus {
 }
 .color {
 	color: #4ACCD1;
+    font-weight: bold;
 }
 
 /* pricing box  */
