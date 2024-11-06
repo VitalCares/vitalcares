@@ -339,7 +339,7 @@ Navigation
 
 .navbar-brand.reduce {
 	margin-top: 10px;
-	padding-bottom: 70px;
+xzBx	padding-bottom: 70px;
 	-webkit-transition: all .4s ease-in-out;
 	-moz-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
@@ -1645,6 +1645,9 @@ Testimonial
 .company-social .social-google a i {
 	background: #000;
 }
+.company-social .social-tiktok a i {
+	background: #333;
+}	
 
 .company-social .social-vimeo a i {
 	background: #51a6d3;
@@ -1676,6 +1679,10 @@ Testimonial
 
 .company-social .social-google a:hover i {
 	background: #333;
+}
+
+.company-social .social-tiktok a:hover i {
+	background: #000;
 }
 
 .company-social .social-vimeo a:hover i {
